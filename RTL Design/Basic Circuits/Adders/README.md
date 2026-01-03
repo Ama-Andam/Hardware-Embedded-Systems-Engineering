@@ -13,10 +13,10 @@ This one takes two bits and adds them together. Pretty straightforward - just XO
 **Testing it out:**
 
 When A=1 and B=0, we get Sum=1 and Carry=0 (makes sense, 1+0=1 with no overflow):
-![Half Adder - Input 1,0](Screenshot%202026-01-02%20at%2011.08.24%20PM.png)
+![Half Adder - Input 1,0](halfadder_1_0.png)
 
 When A=1 and B=1, we get Sum=0 and Carry=1 (1+1=10 in binary):
-![Half Adder - Input 1,1](Screenshot%202026-01-02%20at%2011.08.52%20PM.png)
+![Half Adder - Input 1,1](halfadder_1_1.png)
 
 ## Full Adder
 
@@ -29,10 +29,10 @@ This one's a bit more complex - it takes two input bits AND a carry-in bit. So y
 **Testing it:**
 
 With A=0, B=1, Cin=1, we get Sum=0 and Cout=1 (0+1+1=10 in binary):
-![Full Adder - Input 0,1,1](Screenshot%202026-01-02%20at%2011.09.13%20PM.png)
+![Full Adder - Input 0,1,1](fulladder_0_1_1.png)
 
 With A=1, B=1, Cin=1, we get Sum=1 and Cout=1 (1+1+1=11 in binary):
-![Full Adder - Input 1,1,1](Screenshot%202026-01-02%20at%2011.09.23%20PM.png)
+![Full Adder - Input 1,1,1](fulladder_1_1_1.png)
 
 ## Files
 
