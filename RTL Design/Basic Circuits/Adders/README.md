@@ -1,6 +1,6 @@
 # Adders
 
-Some basic digital circuits I'm building out. Started with the theory, then moved to Multisim to actually simulate them and see how they work. This is day 2 of me trying to get better at this everyday.
+Some basic digital circuits I'm building out. Started with the theory, then moved to Multisim to actually simulate them and see how they work. Built the Verilog implementations and found some bugs when simulating in Vivado - fixed those on day 3. Also implemented them in C to verify the logic and revisited structs (something I had forgotten but that's exactly why I'm doing this repo - pushing myself everyday to get good at this).
 
 ## Half Adder
 
@@ -39,14 +39,45 @@ With A=1, B=1, Cin=1, we get Sum=1 and Cout=1 (1+1+1=11 in binary):
 - `halfadder.v` - Half adder module
 - `fulladder.v` - Full adder module  
 - `testbench.v` - Tests for both of them
+- `halfadder.c` - Half adder implementation in C (using structs)
+- `fulladder.c` - Full adder implementation in C (using structs)
 
 ## To Run
 
+### Verilog Simulation
 Just simulate it with your Verilog tool:
 ```bash
 verilog halfadder.v fulladder.v testbench.v
 ```
 
+### C Implementation
+Compile and run the C versions:
+```bash
+gcc halfadder.c -o halfadder && ./halfadder
+gcc fulladder.c -o fulladder && ./fulladder
+```
+
+## Progress Log
+
+### Day 3/365 - January 3, 2026
+Made some mistakes in the initial Verilog code that I caught when running the simulation in Vivado today. Fixed the bugs in `fulladder.v`, `halfadder.v`, and `testbench.v`. The simulation now works correctly!
+
+Also implemented both adders in C using structs (good practice since I had forgotten about them). Compiled and ran them on Ubuntu to verify the results matched - they did!
+
+**Vivado Simulation Results:**
+![Vivado Simulation](Screenshot%202026-01-03%20at%206.39.37%E2%80%AFPM.png)
+
+**C Implementation Results:**
+
+Full Adder output:
+![Full Adder C Results](Screenshot%202026-01-03%20at%209.08.42%E2%80%AFPM.png)
+
+Half Adder output:
+![Half Adder C Results](Screenshot%202026-01-03%20at%209.21.40%E2%80%AFPM.png)
+
+### Day 2/365
+Initial Verilog implementations and testbench. Simulated in Multisim to understand the logic.
+
 ---
 
-**Day 2/365** - Committed to getting better at this one day at a time.
+**Day 3/365** - Committed to getting better at this one day at a time.
