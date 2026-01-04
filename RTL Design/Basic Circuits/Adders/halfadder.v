@@ -9,7 +9,6 @@ module half_adder(
     input B, // Second input bit B
     output SUM, // A XOR B or A&(~B) | B&(~A)
     output CARRY // AB
-){
+);
     assign{SUM,CARRY} = {A^B, A&B};
-}
 endmodule

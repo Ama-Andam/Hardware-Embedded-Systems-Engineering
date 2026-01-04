@@ -11,7 +11,6 @@ module full_adder(
     output S, // Sum output
     output Cout // Carry output
     
-){
-    assign{S,Cout} = {A^B^Cin, Cin&(B|A) | A&B};
-}
+);
+    assign {S,Cout} = {A^B^Cin, Cin&(B|A) | A&B};
 endmodule

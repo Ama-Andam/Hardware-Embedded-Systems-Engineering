@@ -30,7 +30,8 @@ module testbench;
         .S(S),
         .Cout(Cout)
     );
-
+    
+    integer i;
     initial begin
         // Test all combinations of inputs for half adder
         $display("Half Adder Test:");
@@ -45,11 +46,11 @@ module testbench;
 
         // Test all combinations of inputs for full adder
         $display("\nFull Adder Test:");
-        for (int i = 0; i < 8; i = i + 1) begin
+        for (i = 0; i < 8; i = i + 1) begin
             {A, B, Cin} = i; #10;
             $display("A=%b B=%b Cin=%b | S=%b Cout=%b", A, B, Cin, S, Cout);
         end
 
         $finish;
     end
-
+endmodule
