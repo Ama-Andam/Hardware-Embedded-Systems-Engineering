@@ -61,7 +61,9 @@ gcc fulladder.c -o fulladder && ./fulladder
 
 ### Day 4/365 - January 4, 2026
 - First Yosys synthesis run for the half- and full-adder; captured gate-level netlists and schematics.
-- Artifacts: [4_365.md](4_365.md), [fulladder_synth.v](fulladder_synth.v), [halfadder_synth.v](halfadder_synth.v), [image.yosys_show.png](image.yosys_show.png) (full adder), [halfadder.yosys_show.png](halfadder.yosys_show.png) (half adder).
+- Artifacts: [4_365.md](4_365.md), [fulladder_synth.v](fulladder_synth.v), [halfadder_synth.v](halfadder_synth.v)
+	- Full adder schematic: ![Full adder gate-level schematic](image.yosys_show.png)
+	- Half adder schematic: ![Half adder gate-level schematic](halfadder.yosys_show.png)
 - Flow: `read_verilog` → `hierarchy -top` → `proc` → `opt` → `techmap` → `abc -g AND,OR,XOR` → `write_verilog`.
 
 ### Day 3/365 - January 3, 2026
