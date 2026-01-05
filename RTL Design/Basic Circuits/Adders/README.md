@@ -59,6 +59,11 @@ gcc fulladder.c -o fulladder && ./fulladder
 
 ## Progress Log
 
+### Day 4/365 - January 4, 2026
+- First Yosys synthesis run for the half- and full-adder; captured gate-level netlists and schematics.
+- Artifacts: [4_365.md](4_365.md), [fulladder_synth.v](fulladder_synth.v), [halfadder_synth.v](halfadder_synth.v), [image.yosys_show.png](image.yosys_show.png) (full adder), [halfadder.yosys_show.png](halfadder.yosys_show.png) (half adder).
+- Flow: `read_verilog` → `hierarchy -top` → `proc` → `opt` → `techmap` → `abc -g AND,OR,XOR` → `write_verilog`.
+
 ### Day 3/365 - January 3, 2026
 Made some mistakes in the initial Verilog code that I caught when running the simulation in Vivado today. Fixed the bugs in `fulladder.v`, `halfadder.v`, and `testbench.v`. The simulation now works correctly!
 
